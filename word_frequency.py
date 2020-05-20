@@ -10,7 +10,12 @@ def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
     open_file=open(file)
     whole = open_file.read()
-    print(whole)
+    # print(whole)
+    for word in whole:
+        word=whole.lower()
+    print(word)
+
+        
 
        
             
