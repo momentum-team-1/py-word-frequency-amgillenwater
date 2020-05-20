@@ -3,25 +3,28 @@ STOP_WORDS = [
     'i', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'were',
     'will', 'with'
 ]
-import string
-punctuation = string.punctuation
+
+def clean_text(text):
+    """
+    Given a text, return the text with no spaces or punctuation and all lowercased.
+    """
+    text = text.lower()
+    all_letters = "abcdefghijklmnopqrstuvwxyz "
+    text_to_keep = ""
+    for char in text:
+        if char in all_letters:
+            text_to_keep += char
+    return text_to_keep
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
     open_file=open(file)
     whole = open_file.read()
-    # print(whole)
-    for word in whole:
-        word=whole.lower()
-    print(word)
+    cleaned_text = []
+    cleaned_text.append(clean_text(whole).split(" "))
+    print(cleaned_text)
 
-        
-
-       
-            
-        
-            
-
+   
     
 
 if __name__ == "__main__":
