@@ -7,8 +7,14 @@ STOP_WORDS = [
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
-    
+    words = []
+    with open(file) as open_file:
+        file = open_file.read()
+        for words in file:
+            print(words.lower())
+            
 
+    
 
 if __name__ == "__main__":
     import argparse
@@ -27,9 +33,11 @@ if __name__ == "__main__":
         exit(1)
 
 
+
 def remove_from_list(list_of_items, items_to_remove):
     new_list = []
     for item in list_of_items:
         if not item in items_to_remove:
             new_list.append(item)
     return(new_list)
+
