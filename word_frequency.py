@@ -22,10 +22,17 @@ def print_word_freq(file):
     whole = open_file.read()
     cleaned_text = []
     cleaned_text.append(clean_text(whole).split(" "))
-    print(cleaned_text)
+    print(remove_from_list(cleaned_text, STOP_WORDS))
+
+
 
    
-    
+def remove_from_list(list_of_items, items_to_remove):
+    new_list = []
+    for item in list_of_items:
+        if not item in items_to_remove:
+            new_list.append(item)
+    return(new_list)
 
 if __name__ == "__main__":
     import argparse
@@ -42,13 +49,3 @@ if __name__ == "__main__":
     else:
         print(f"{file} does not exist!")
         exit(1)
-
-
-
-def remove_from_list(list_of_items, items_to_remove):
-    new_list = []
-    for item in list_of_items:
-        if not item in items_to_remove:
-            new_list.append(item)
-    return(new_list)
-
