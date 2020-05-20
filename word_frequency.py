@@ -3,15 +3,18 @@ STOP_WORDS = [
     'i', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'were',
     'will', 'with'
 ]
-
+import string
+punctuation = string.punctuation
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
-    words = []
-    with open(file) as open_file:
-        file = open_file.read()
-        for words in file:
-            print(words.lower())
+    open_file=open(file)
+    whole = open_file.read()
+    print(whole)
+
+       
+            
+        
             
 
     
