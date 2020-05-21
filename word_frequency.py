@@ -28,22 +28,18 @@ def remove_from_list(list_of_items, items_to_remove):
         if not item in items_to_remove:
             new_list.append(item)
     return(new_list)
+
+
+# make a function that has a new dictionary(?) and has an if statement like...if the word is not in the list, add it. if it is, += 1 
     
 def print_word_freq(file):
-    """Read in `file` and print out the frequency of words in that file."""
+    """Read in `file` and print out the frequency of words in that file. All other functions are called here."""
     open_file=open(file)
     whole = open_file.read()
     text = clean_text(whole).split()
-    # print(text)
     squeaky_clean_text = remove_from_list(text, stop_words)
     print(squeaky_clean_text)
-    # step_one = remove_line_breaks(whole)
-    # print(step_one)
-    # cleaned_text = []
-    # cleaned_text = step_one.append(clean_text(whole).split(" "))
-    # print(cleaned_text)
-    # now = remove_from_list(cleaned_text, STOP_WORDS)
-    # print(now)
+    
 
 if __name__ == "__main__":
     import argparse
