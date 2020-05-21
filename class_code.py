@@ -1,5 +1,16 @@
-# 1. Write a function `remove_from_list(list_of_items, item_to_remove)` that takes a list of items and an item to remove from that list and returns a new list with the item removed. Write code to test this.
-# 2. Make sure your function removes all instances of the item. Write code to test this. `remove_from_list(['MI', 'AK', 'SC', 'AK', 'DE'], 'AK')` should return `['MI', 'SC', 'DE']`.
-# 3. Write a function `remove_many_from_list(list_of_items, items_to_remove)` that takes two lists, a list of items, and a list of items to remove from that original list. You can re-use `remove_from_list` or write it from scratch.
+# Write a function print_freq_results(results). This function should take an argument results that is a list of tuples like the following:
+results =  [
+       ('her', 33),
+       ('all', 12),
+       ('which', 12),
+       ('she', 7),
+       ('their', 7),
+   ]
 
-def remove_from_list(list_of_items, item_to_remove)
+def print_freq_results(results):
+    for word, frequency in results.items():
+        print(word)
+        for count, number in frequency.items():
+            print (count, number)
+
+print_freq_results(results)
